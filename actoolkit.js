@@ -56,14 +56,10 @@ function fetchJSON() {
 
 const printButton = document.getElementById("printButton");
 printButton.addEventListener("click", () => {
-    //Create print window HTML
-    const toolkit = document.getElementById("toolkit");
-    const head = document.getElementById("head");
-    toolkit.innerHTML = head.innerHTML + toolkit.innerHTML;
     //Open new window
     const newWindow = window.open("", "", menubar=0, status=0, titlebar=0);
-    //Write HTML to new window
-    newWindow.document.write(toolkit.innerHTML);
+    //Write toolkit section and head HTML to new window
+    newWindow.document.write(document.getElementById("toolkit").innerHTML + document.getElementById("head").innerHTML);
     //Wait 100ms for new window to populate then open print dialog
     setTimeout(() => newWindow.print(), 100);
 });
