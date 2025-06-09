@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ACToolkit</title> 
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link href="actoolkit.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="actoolkit.js" defer></script>
+</head>
+<body>
+    <header class="center">
+        <h1>ACToolkit</h1>
+    </header>
+    <main>
+        <div class="center">
+            <button id="printButton">Print</button>
+            <button id="saveButton">Save</button>
+            <button id="resetButton">Reset</button>
+        </div>
+
+        <section id="toolkit">
+            <h2>My Toolkit</h2>
+                <div class="columns">
+                    <h3>Defusion</h3>
+                        <div id="defusionTools">
+
+                        </div>
+                    <h3>Acceptance</h3>
+                        <div id="acceptanceTools">
+
+                        </div>
+                    <h3>Contact With the Present Moment</h3>
+                        <div id="contactWithPresentMomentTools">
+
+                        </div>
+                    <h3 class="break">Self-as-Context</h3>
+                        <div id="selfAsContextTools">
+
+                        </div>
+                    <h3>Values</h3>
+                        <div id="valuesTools">
+
+                        </div>
+                    <h3>Committed Action</h3>
+                        <div id="committedActionTools">
+
+                        </div>
+                </div>
+        </section>
+
+        <section>
+            <h2>Tool Bank</h2>
+                <div class="columns">
+                    <h3>Defusion</h3>
+                        <div id="defusionBank">
+
+                        </div>
+                    <h3>Acceptance</h3>
+                        <div id="acceptanceBank">
+
+                        </div>
+                    <h3>Contact With the Present Moment</h3>
+                        <div id="contactWithPresentMomentBank">
+
+                        </div>
+                    <h3 class="break">Self-as-Context</h3>
+                        <div id="selfAsContextBank">
+
+                        </div>
+                    <h3>Values</h3>
+                        <div id="valuesBank">
+
+                        </div>
+                    <h3>Committed Action</h3>
+                        <div id="committedActionBank">
+
+                        </div>
+                </div>
+        </section>
+
+        <section>
+        <h2>Add Tool</h2>
+            <form method="post" class="columns">
+                <input type="text" id="customName" name="customName" required><br />
+                <label for="customName">Tool Name *</label><br /><br />
+                <select id="customProcess" name="customProcess" required>
+                    <option value="">&#9662; Process *</option>
+                    <option value="defusion">Defusion</option>
+                    <option value="acceptance">Acceptance</option>
+                    <option value="contactWithPresentMoment">Contact with the Present Moment</option>
+                    <option value="selfAsContext">Self-as-Context</option>
+                    <option value="values">Values</option>
+                    <option value="committedAction">Committed Action</option>
+                </select><br /><br />
+                <button type="button" id="addButton">Add</button>
+                <div class="break"></div>
+                <textarea id="customDescription" name="customDescription"></textarea><br />
+                <label for="customDescription">Description</label> <br /><br />
+            </form>
+        </section>
+
+    </main>
+    <footer class="center">&copy; 2025 Greg Weseloh</footer>
+</body>
+</html>

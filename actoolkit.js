@@ -1,0 +1,115 @@
+class Tool {
+    constructor(name, process, description, toolsOrBank = "Bank", isCustom = false) {
+        this.name = name;
+        this.process = process;
+        this.description = description;
+        this.toolsOrBank = toolsOrBank;
+        this.isCustom = isCustom;
+        this.button = null;
+        this.createButton();
+    }
+
+    createButton() {
+        this.button = document.createElement("button");
+        this.button.innerHTML = this.name;
+        //Show description on hover
+        this.button.title = this.description;
+        this.button.addEventListener("click", () => {
+            if (this.isCustom) {
+                //Delete custom tool from array
+                let index = toolsArray.findIndex(tool => tool.name === this.name);
+	            toolsArray.splice(index, 1);
+                //Delete tool object
+                delete this.button;
+                delete this;
+                location.reload();
+            }
+            //Update tool location
+            if (this.toolsOrBank === "Bank") {
+                this.toolsOrBank = "Tools";
+            } else if (this.toolsOrBank === "Tools") {
+                this.toolsOrBank = "Bank";
+            }
+            this.appendButton();
+        });
+        this.appendButton();
+    }
+
+    appendButton() {
+        //Add button to div
+        window[this.process + this.toolsOrBank].appendChild(this.button);
+    }
+}
+
+//Populate array from JSON
+function fetchJSON() {
+    fetch('tools.json').then((response) => response.json()).then((tools) => {
+        for(let tool of tools) {
+            toolsArray.push(new Tool(tool.name, tool.process, tool.description));
+        }
+    });
+}
+
+const printButton = document.getElementById("printButton");
+printButton.addEventListener("click", () => {
+    //Create print window HTML
+    const toolkit = document.getElementById("toolkit");
+    const head = document.getElementById("head");
+    toolkit.innerHTML = head.innerHTML + toolkit.innerHTML;
+    //Open new window
+    const newWindow = window.open("", "", menubar=0, status=0, titlebar=0);
+    //Write HTML to new window
+    newWindow.document.write(toolkit.innerHTML);
+    //Wait 100ms for new window to populate then open print dialog
+    setTimeout(() => newWindow.print(), 100);
+});
+
+const saveButton = document.getElementById("saveButton");
+saveButton.addEventListener("click", () => {
+    //Save current array to local storage
+    localStorage.setItem("toolsArray", JSON.stringify(toolsArray));
+    alert("Saved!");
+})
+
+const resetButton = document.getElementById("resetButton");
+resetButton.addEventListener("click", () => {
+    //Clear local storage
+    localStorage.removeItem("toolsArray");
+    location.reload();
+});
+
+const addButton = document.getElementById("addButton");
+addButton.addEventListener("click", () => {
+    //Custom error messages
+    if (customName.value === "") {
+        customName.focus();
+        alert("Please enter a tool name.");
+        return;
+    }
+
+    if (customProcess.value === "") {
+        customProcess.focus();
+        alert("Please select a process.");
+        return;
+    }
+    //Add custom tool to array
+    toolsArray.push(new Tool("&times; " + document.getElementById("customName").value, document.getElementById("customProcess").value, document.getElementById("customDescription").value, "Tools", true));
+    //Clear form
+    customName.value = "";
+    customProcess.value = "";
+    customDescription.value = "";
+});
+
+//Initialize array
+let toolsArray = [];
+//Attempt to retrieve array from local storage
+let localStorageArray = JSON.parse(localStorage.getItem("toolsArray"));
+//If no array found in local storage, populate array from JSON
+if (localStorageArray === null) {
+    fetchJSON();
+//If array found in local storage, re-populate array from local storage
+} else {
+    for (let tool of localStorageArray) {
+        toolsArray.push(new Tool(tool.name, tool.process, tool.description, tool.toolsOrBank));
+    }
+}

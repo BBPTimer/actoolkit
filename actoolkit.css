@@ -1,0 +1,88 @@
+body {
+    font-family: quicksand;
+    width: 100vw; /* set to 80vw if not setting box-sizing property below */
+    padding: 0 10vw; /* top/bottom left/right */
+    margin: 0;
+    box-sizing: border-box; /* allows for full width */
+}
+
+header, footer, h1, h2 {
+    color: white;
+    background: #018fd9;
+    padding: 10px 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 5vw;
+    /* font-size: 4rem; */
+}
+
+h2 {
+    font-weight: lighter;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;   
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: 0.9rem;
+    margin: 5px;
+}
+
+.columns {
+    column-count: 2;
+}
+
+.break {
+    break-before: column;
+}
+
+button, select {
+    background-color: white;
+    margin: 5px;
+}
+
+input, select, textarea {
+    width: 95%;
+}
+
+input, select, button, textarea {
+    font-family: quicksand;
+    border: 1px solid #018fd9;
+    border-radius: 4px;
+    padding: 5px
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 2px solid black;
+}
+
+select {
+    appearance: none;
+    padding: 5px;
+    margin: 0px;
+}
+
+textarea {
+    resize: none;
+    height: 6rem;
+}
+
+label {
+    font-size: 0.8rem;
+}
