@@ -1,13 +1,23 @@
 [
     {
-        "name": "Getting hooked and unhooking",
-        "process": "defusion",
+        "name": "1000 mile journey: what's your first step?",
+        "process": "committedAction",
         "description": ""
     },
     {
-        "name": "Writing thoughts on cards/paper",
-        "process": "defusion",
+        "name": "Allowing",
+        "process": "acceptance",
+        "description": "See if you can allow this feeling to be there. You don't have to like it or want it—just allow it."
+    },
+    {
+        "name": "Brief bull's eye",
+        "process": "committedAction",
         "description": ""
+    },
+    {
+        "name": "Compassionate hand",
+        "process": "acceptance",
+        "description": "Lay a hand on the part of your body where you feel this most intensely. Imagine this is a healing hand—the hand of a loving nurse or parent or partner. Send some warmth into this area—not to get rid of the feeling, but to open up around it, make room for it, hold it gently."
     },
     {
         "name": "Computer screen",
@@ -15,7 +25,97 @@
         "description": "Imagine this thought on a computer screen. Change the font, color, and format. Animate the words. Add in a bouncing ball."
     },
     {
+        "name": "Connect & reflect",
+        "process": "values",
+        "description": ""
+    },
+    {
+        "name": "Documentary of Africa",
+        "process": "selfAsContext",
+        "description": ""
+    },
+    {
+        "name": "Documentary question",
+        "process": "committedAction",
+        "description": ""
+    },
+    {
+        "name": "Dropping anchor",
+        "process": "contactWithPresentMoment",
+        "description": "Acknowledge the feeling, connect with your body, and engage with the world."
+    },
+    {
+        "name": "Emotion surfing",
+        "process": "acceptance",
+        "description": "Surf your feelings and urges as is they are ocean waves."
+    },
+    {
+        "name": "Getting hooked and unhooking",
+        "process": "defusion",
+        "description": ""
+    },
+    {
+        "name": "Hands as thoughts",
+        "process": "contactWithPresentMoment",
+        "description": ""
+    },
+    {
         "name": "I'm having the thought that...",
+        "process": "defusion",
+        "description": ""
+    },
+    {
+        "name": "Imagine your eightieth birthday",
+        "process": "values",
+        "description": ""
+    },
+    {
+        "name": "Leaves on a stream",
+        "process": "defusion",
+        "description": ""
+    },
+    {
+        "name": "Mind-reading machine",
+        "process": "values",
+        "description": ""
+    },
+    {
+        "name": "Mindful naming",
+        "process": "acceptance",
+        "description": "Label the feeling mindfully: I'm noticing anxiety, Here is sadness, I'm having a feeling of anger."
+    },
+    {
+        "name": "Mindfulness of the hand",
+        "process": "contactWithPresentMoment",
+        "description": ""
+    },
+    {
+        "name": "Naming the story",
+        "process": "defusion",
+        "description": "If all these thoughts and feelings were put into a book or movie, titled 'the something something story,' what would you call it? Each time this story shows up, name it: 'Aha, there's the XYZ story again!'"
+    },
+    {
+        "name": "Normalizing",
+        "process": "acceptance",
+        "description": "This feeling tells you that you're a normal human being who has a heart and who cares. This is what humans feel when there's a gap between what we want and what we've got."
+    },
+    {
+        "name": "Notice X, Y, Z ... So there's a part of you that's noticing",
+        "process": "selfAsContext",
+        "description": ""
+    },
+    {
+        "name": "Observe/breathe/<br>expand/allow",
+        "process": "acceptance",
+        "description": ""
+    },
+    {
+        "name": "Pain as your ally",
+        "process": "acceptance",
+        "description": "Use this emotion to motivate, communicate, illuminate."
+    },
+    {
+        "name": "Passengers on the bus",
         "process": "defusion",
         "description": ""
     },
@@ -25,13 +125,8 @@
         "description": ""
     },
     {
-        "name": "Naming the story",
-        "process": "defusion",
-        "description": "If all these thoughts and feelings were put into a book or movie, titled 'the something something story,' what would you call it? Each time this story shows up, name it: 'Aha, there's the XYZ story again!'"
-    },
-    {
-        "name": "Passengers on the bus",
-        "process": "defusion",
+        "name": "Stage show",
+        "process": "selfAsContext",
         "description": ""
     },
     {
@@ -40,89 +135,14 @@
         "description": ""
     },
     {
-        "name": "Leaves on a stream",
-        "process": "defusion",
-        "description": ""
-    },
-    {
-        "name": "The struggle switch",
-        "process": "acceptance",
-        "description": "Is the struggle switch on, off, or at the halfway point we call 'tolerating it'? If the switch was like a dial with a scale of 0 to 10, and 10 is full on struggle, and 0 no struggle at all, then right now, what level are you? Are you willing to see if we can bring it down a notch or two?"
-    },
-    {
-        "name": "Observe/breathe/<br>expand/allow",
-        "process": "acceptance",
-        "description": ""
-    },
-    {
-        "name": "Compassionate hand",
-        "process": "acceptance",
-        "description": "Lay a hand on the part of your body where you feel this most intensely. Imagine this is a healing hand—the hand of a loving nurse or parent or partner. Send some warmth into this area—not to get rid of the feeling, but to open up around it, make room for it, hold it gently."
-    },
-    {
-        "name": "Pain as your ally",
-        "process": "acceptance",
-        "description": "Use this emotion to motivate, communicate, illuminate."
-    },
-    {
-        "name": "Allowing",
-        "process": "acceptance",
-        "description": "See if you can allow this feeling to be there. You don't have to like it or want it—just allow it."
-    },
-    {
-        "name": "Emotion surfing",
-        "process": "acceptance",
-        "description": "Surf your feelings and urges as is they are ocean waves."
-    },
-    {
         "name": "The curious child",
         "process": "acceptance",
         "description": "Notice where this feeling is in your body. Zoom in on it. Observe it as if you are a curious child who has never encountered anything like this. Where are the edges? Where does it start and stop? Is it moving or still? Is it at the surface or inside you? Hot or cold? Light or heavy?"
     },
     {
-        "name": "Mindful naming",
+        "name": "The struggle switch",
         "process": "acceptance",
-        "description": "Label the feeling mindfully: I'm noticing anxiety, Here is sadness, I'm having a feeling of anger."
-    },
-    {
-        "name": "Normalizing",
-        "process": "acceptance",
-        "description": "This feeling tells you that you're a normal human being who has a heart and who cares. This is what humans feel when there's a gap between what we want and what we've got."
-    },
-    {
-        "name": "Hands as thoughts",
-        "process": "contactWithPresentMoment",
-        "description": ""
-    },
-    {
-        "name": "Mindfulness of the hand",
-        "process": "contactWithPresentMoment",
-        "description": ""
-    },
-    {
-        "name": "Dropping anchor",
-        "process": "contactWithPresentMoment",
-        "description": "Acknowledge the feeling, connect with your body, and engage with the world."
-    },
-    {
-        "name": "Stage show",
-        "process": "selfAsContext",
-        "description": ""
-    },
-    {
-        "name": "Documentary of Africa",
-        "process": "selfAsContext",
-        "description": ""
-    },
-    {
-        "name": "Notice X, Y, Z ... So there's a part of you that's noticing",
-        "process": "selfAsContext",
-        "description": ""
-    },
-    {
-        "name": "Connect & reflect",
-        "process": "values",
-        "description": ""
+        "description": "Is the struggle switch on, off, or at the halfway point we call 'tolerating it'? If the switch was like a dial with a scale of 0 to 10, and 10 is full on struggle, and 0 no struggle at all, then right now, what level are you? Are you willing to see if we can bring it down a notch or two?"
     },
     {
         "name": "Two kids in a car",
@@ -135,33 +155,13 @@
         "description": ""
     },
     {
+        "name": "Writing thoughts on cards/paper",
+        "process": "defusion",
+        "description": ""
+    },
+    {
         "name": "Your ten-year anniversary",
         "process": "values",
-        "description": ""
-    },
-    {
-        "name": "Mind-reading machine",
-        "process": "values",
-        "description": ""
-    },
-    {
-        "name": "Imagine your eightieth birthday",
-        "process": "values",
-        "description": ""
-    },
-    {
-        "name": "1000 mile journey: what's your first step?",
-        "process": "committedAction",
-        "description": ""
-    },
-    {
-        "name": "Brief bull's eye",
-        "process": "committedAction",
-        "description": ""
-    },
-    {
-        "name": "Documentary question",
-        "process": "committedAction",
         "description": ""
     }
 ]

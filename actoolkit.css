@@ -83,6 +83,10 @@ textarea {
     height: 6rem;
 }
 
-label {
+label, li {
     font-size: 0.8rem;
+}
+
+a {
+    color: #018fd9;
 }
