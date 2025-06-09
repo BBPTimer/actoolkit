@@ -1,10 +1,9 @@
 class Tool {
-    constructor(name, process, description, toolsOrBank = "Bank", isCustom = false) {
+    constructor(name, process, description, toolsOrBank = "Bank") {
         this.name = name;
         this.process = process;
         this.description = description;
         this.toolsOrBank = toolsOrBank;
-        this.isCustom = isCustom;
         this.button = null;
         this.createButton();
     }
@@ -15,15 +14,6 @@ class Tool {
         //Show description on hover
         this.button.title = this.description;
         this.button.addEventListener("click", () => {
-            if (this.isCustom) {
-                //Delete custom tool from array
-                let index = toolsArray.findIndex(tool => tool.name === this.name);
-	            toolsArray.splice(index, 1);
-                //Delete tool object
-                delete this.button;
-                delete this;
-                location.reload();
-            }
             //Update tool location
             if (this.toolsOrBank === "Bank") {
                 this.toolsOrBank = "Tools";
@@ -93,7 +83,7 @@ addButton.addEventListener("click", () => {
         return;
     }
     //Add custom tool to array
-    toolsArray.push(new Tool("&times; " + document.getElementById("customName").value, document.getElementById("customProcess").value, document.getElementById("customDescription").value, "Tools", true));
+    toolsArray.push(new Tool(document.getElementById("customName").value, document.getElementById("customProcess").value, document.getElementById("customDescription").value, "Tools"));
     //Clear form
     customName.value = "";
     customProcess.value = "";
