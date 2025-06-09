@@ -1,9 +1,10 @@
 class Tool {
-    constructor(name, process, description, toolsOrBank = "Bank") {
+    constructor(name, process, description, toolsOrBank = "Bank", isCustom = false) {
         this.name = name;
         this.process = process;
         this.description = description;
         this.toolsOrBank = toolsOrBank;
+        this.isCustom = isCustom;
         this.button = null;
         this.createButton();
     }
@@ -14,6 +15,17 @@ class Tool {
         //Show description on hover
         this.button.title = this.description;
         this.button.addEventListener("click", () => {
+            //Remove custom tool if clicked
+            if (this.isCustom) {
+                //Remove button from div
+                window[this.process + this.toolsOrBank].removeChild(this.button);
+                //Delete custom tool from array
+	            toolsArray.splice(toolsArray.findIndex(tool => tool.name === this.name), 1);
+                //Update local storage
+                updateLocalStorage();
+                //Early return
+                return;
+            }
             //Update tool location
             if (this.toolsOrBank === "Bank") {
                 this.toolsOrBank = "Tools";
@@ -21,6 +33,8 @@ class Tool {
                 this.toolsOrBank = "Bank";
             }
             this.appendButton();
+            //Save change to local storage
+            updateLocalStorage();
         });
         this.appendButton();
     }
@@ -54,13 +68,6 @@ printButton.addEventListener("click", () => {
     setTimeout(() => newWindow.print(), 100);
 });
 
-const saveButton = document.getElementById("saveButton");
-saveButton.addEventListener("click", () => {
-    //Save current array to local storage
-    localStorage.setItem("toolsArray", JSON.stringify(toolsArray));
-    alert("Saved!");
-})
-
 const resetButton = document.getElementById("resetButton");
 resetButton.addEventListener("click", () => {
     //Clear local storage
@@ -83,12 +90,18 @@ addButton.addEventListener("click", () => {
         return;
     }
     //Add custom tool to array
-    toolsArray.push(new Tool(document.getElementById("customName").value, document.getElementById("customProcess").value, document.getElementById("customDescription").value, "Tools"));
+    toolsArray.push(new Tool("&times; " + document.getElementById("customName").value, document.getElementById("customProcess").value, document.getElementById("customDescription").value, "Tools", true));
+    //Update local storage
+    updateLocalStorage();
     //Clear form
     customName.value = "";
     customProcess.value = "";
     customDescription.value = "";
 });
+
+function updateLocalStorage () {
+    localStorage.setItem("toolsArray", JSON.stringify(toolsArray));
+}
 
 //Initialize array
 let toolsArray = [];
@@ -100,6 +113,6 @@ if (localStorageArray === null) {
 //If array found in local storage, re-populate array from local storage
 } else {
     for (let tool of localStorageArray) {
-        toolsArray.push(new Tool(tool.name, tool.process, tool.description, tool.toolsOrBank));
+        toolsArray.push(new Tool(tool.name, tool.process, tool.description, tool.toolsOrBank, tool.isCustom));
     }
 }
